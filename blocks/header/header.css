@@ -243,22 +243,12 @@ header .scrolling-banner a {
   font-weight: 500;
 }
 
-header .scrolling-banner a:hover {
-  color: #ccc;
-  text-decoration: underline;
-}
-
 /* Top bar styles - moved here to fix specificity order */
 header .top-bar a {
   color: #000;
   text-decoration: none;
   font: var(--type-body-2-default-font);
   letter-spacing: var(--type-body-2-default-letter-spacing);
-}
-
-header .top-bar a:hover {
-  color: #666;
-  text-decoration: underline;
 }
 
 header .top-bar .currency-selector,
@@ -331,6 +321,17 @@ header nav .nav-sections ul > li > a {
   letter-spacing: var(--type-body-2-strong-letter-spacing);
 }
 
+/* Hover styles - moved here to fix specificity order */
+header .scrolling-banner a:hover {
+  color: #ccc;
+  text-decoration: underline;
+}
+
+header .top-bar a:hover {
+  color: #666;
+  text-decoration: underline;
+}
+
 header nav .nav-brand a:hover {
   text-decoration: none;
 }
@@ -373,10 +374,6 @@ header nav .nav-sections ul > li:empty {
     cursor: pointer;
   }
 
-  header nav .nav-sections .default-content-wrapper > ul > li a {
-    text-decoration: none;
-  }
-
 header nav .nav-sections ul {
   display: flex;
   gap: 32px;
@@ -391,6 +388,10 @@ header nav .nav-sections ul > li > a {
   text-decoration: none;
   padding: 0.8rem 0;
   position: relative;
+}
+
+header nav .nav-sections .default-content-wrapper > ul > li a {
+  text-decoration: none;
 }
 
 header nav .nav-sections ul > li > a:hover {
@@ -957,5 +958,6 @@ li
   max-width: 15rem;
   max-height: 15rem;
 }
+
 
 

@@ -485,9 +485,60 @@ export default async function decorate(block) {
     }
   });
 
+  // Create scrolling banner
+  const scrollingBanner = document.createElement('div');
+  scrollingBanner.className = 'scrolling-banner';
+  scrollingBanner.innerHTML = `
+    <div class="scrolling-banner-content">
+      <div class="banner-item">
+        <a href="/sale">🔥 UP TO 70% OFF - END OF SEASON SALE</a>
+      </div>
+      <div class="banner-item">
+        <a href="/shipping">🚚 FREE SHIPPING ON ORDERS OVER £100</a>
+      </div>
+      <div class="banner-item">
+        <a href="/new-arrivals">✨ NEW ARRIVALS EVERY WEEK</a>
+      </div>
+      <div class="banner-item">
+        <a href="/membership">👑 JOIN END. MEMBERSHIP FOR EXCLUSIVE ACCESS</a>
+      </div>
+      <div class="banner-item">
+        <a href="/sustainability">🌱 SHOP SUSTAINABLE FASHION</a>
+      </div>
+    </div>
+  `;
+
+  // Create top black bar
+  const topBar = document.createElement('div');
+  topBar.className = 'top-bar';
+  topBar.innerHTML = `
+    <div class="top-bar-content">
+      <div class="top-bar-left">
+        <a href="/men">Men</a>
+        <a href="/women">Women</a>
+      </div>
+      <div class="top-bar-right">
+        <select class="country-selector" aria-label="Select country">
+          <option value="gb">GB</option>
+          <option value="us">US</option>
+          <option value="eu">EU</option>
+        </select>
+        <select class="currency-selector" aria-label="Select currency">
+          <option value="gbp">£ GBP</option>
+          <option value="usd">$ USD</option>
+          <option value="eur">€ EUR</option>
+        </select>
+        <a href="/help">Help</a>
+        <a href="/account">Account</a>
+      </div>
+    </div>
+  `;
+
   const navWrapper = document.createElement('div');
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
+  block.append(scrollingBanner);
+  block.append(topBar);
   block.append(navWrapper);
 
   navWrapper.addEventListener('mouseout', (e) => {

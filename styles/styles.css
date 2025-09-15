@@ -163,7 +163,13 @@ body:not(.appear) {
 
 header {
   grid-row: 1;
-  height: var(--nav-height);
+  height: calc(var(--nav-height) + var(--top-bar-height, 3.2rem) + var(--banner-height, 3.6rem));
+}
+
+@media (max-width: 899px) {
+  header {
+    height: var(--nav-height);
+  }
 }
 
 main {

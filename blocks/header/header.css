@@ -8,10 +8,10 @@
   --banner-height: 3.6rem;
 }
 
-/* Top black bar */
+/* Top white bar */
 header .top-bar {
-  background-color: #000;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   height: var(--top-bar-height);
   display: flex;
   align-items: center;
@@ -184,36 +184,7 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
   }
 }
 
-/* Top bar styles - placed before nav-brand to fix specificity order */
-header .top-bar a {
-  color: #fff;
-  text-decoration: none;
-  font: var(--type-body-2-default-font);
-  letter-spacing: var(--type-body-2-default-letter-spacing);
-}
-
-header .top-bar a:hover {
-  color: #ccc;
-  text-decoration: underline;
-}
-
-header .top-bar .currency-selector,
-header .top-bar .country-selector {
-  background: transparent;
-  border: 1px solid #fff;
-  color: #fff;
-  padding: 0.4rem 0.8rem;
-  border-radius: var(--shape-border-radius-1);
-  font: var(--type-body-2-default-font);
-  letter-spacing: var(--type-body-2-default-letter-spacing);
-  cursor: pointer;
-}
-
-header .top-bar .currency-selector option,
-header .top-bar .country-selector option {
-  background-color: #000;
-  color: #fff;
-}
+/* Top bar styles - moved after scrolling banner to fix specificity order */
 
 /* Scrolling Banner styles - placed before nav-brand to fix specificity order */
 header .scrolling-banner {
@@ -275,6 +246,37 @@ header .scrolling-banner a {
 header .scrolling-banner a:hover {
   color: #ccc;
   text-decoration: underline;
+}
+
+/* Top bar styles - moved here to fix specificity order */
+header .top-bar a {
+  color: #000;
+  text-decoration: none;
+  font: var(--type-body-2-default-font);
+  letter-spacing: var(--type-body-2-default-letter-spacing);
+}
+
+header .top-bar a:hover {
+  color: #666;
+  text-decoration: underline;
+}
+
+header .top-bar .currency-selector,
+header .top-bar .country-selector {
+  background: transparent;
+  border: 1px solid #000;
+  color: #000;
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--shape-border-radius-1);
+  font: var(--type-body-2-default-font);
+  letter-spacing: var(--type-body-2-default-letter-spacing);
+  cursor: pointer;
+}
+
+header .top-bar .currency-selector option,
+header .top-bar .country-selector option {
+  background-color: #fff;
+  color: #000;
 }
 
 /* brand */
@@ -955,4 +957,5 @@ li
   max-width: 15rem;
   max-height: 15rem;
 }
+
 

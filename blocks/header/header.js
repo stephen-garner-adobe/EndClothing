@@ -494,13 +494,13 @@ export default async function decorate(block) {
         <a href="/sale">🔥 UP TO 70% OFF - END OF SEASON SALE</a>
       </div>
       <div class="banner-item">
-        <a href="/shipping">🚚 FREE SHIPPING ON ORDERS OVER £100</a>
+        <a href="/shipping">🚚 FREE SHIPPING ON ORDERS OVER £79.99</a>
       </div>
       <div class="banner-item">
-        <a href="/new-arrivals">✨ NEW ARRIVALS EVERY WEEK</a>
+        <a href="/new-arrivals">✨ FOCUS ON PRE-FALL '25 : SHOP THE EDIT</a>
       </div>
       <div class="banner-item">
-        <a href="/membership">👑 JOIN END. MEMBERSHIP FOR EXCLUSIVE ACCESS</a>
+        <a href="/membership">👑 NEW IN: ACNE | FRIZMWORKS | PATAGONIA</a>
       </div>
       <div class="banner-item">
         <a href="/sustainability">🌱 SHOP SUSTAINABLE FASHION</a>

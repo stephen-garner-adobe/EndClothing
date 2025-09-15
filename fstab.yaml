@@ -1,0 +1,7 @@
+mountpoints:
+  /:
+    url: https://content.da.live/stephen-garner-adobe/EndClothing/
+    type: markup
+
+folders:
+  /products/: /products/default

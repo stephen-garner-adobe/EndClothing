@@ -514,8 +514,8 @@ export default async function decorate(block) {
   topBar.innerHTML = `
     <div class="top-bar-content">
       <div class="top-bar-left">
-        <a href="/men">Men</a>
-        <a href="/women">Women</a>
+        <a href="/men">MEN</a>
+        <a href="/women">WOMEN</a>
       </div>
       <div class="top-bar-center">
         <img src="/icons/END_20-Black.gif" alt="END. 20 Logo" class="top-bar-gif">

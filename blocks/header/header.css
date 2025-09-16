@@ -16,8 +16,9 @@ header .top-bar {
   display: flex;
   align-items: center;
   justify-content: center;
-  font: var(--type-body-2-default-font);
-  letter-spacing: var(--type-body-2-default-letter-spacing);
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.5px;
   position: fixed;
   top: var(--banner-height);
   left: 0;
@@ -39,15 +40,18 @@ header .top-bar .top-bar-left {
   display: flex;
   align-items: center;
   gap: var(--spacing-medium);
+  margin-top: 24px;
 }
 
 header .top-bar .top-bar-center {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 8px;
 }
 
 header .top-bar .top-bar-gif {
@@ -262,8 +266,10 @@ header .scrolling-banner a {
 header .top-bar a {
   color: #000;
   text-decoration: none;
-  font: var(--type-body-2-default-font);
-  letter-spacing: var(--type-body-2-default-letter-spacing);
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.5px;
 }
 
 header .top-bar .currency-selector,
@@ -449,12 +455,14 @@ header nav .nav-sections ul > li > a:hover::after {
     background-color: var(--color-neutral-50);
     box-sizing: border-box;
     left: 0;
+    right: 0;
     max-height: var(--desktop-panel-max-height);
     min-height: var(--desktop-panel-min-height);
     padding: var(--spacing-xbig);
-    position: absolute;
-    top: var(--spacing-large);
-    width: 100%;
+    position: fixed;
+    top: calc(var(--nav-height) + var(--top-bar-height, 3.2rem) + var(--banner-height, 3.6rem));
+    width: 100vw;
+    z-index: 10;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li .submenu-header {

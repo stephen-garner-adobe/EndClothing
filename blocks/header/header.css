@@ -69,6 +69,7 @@ header .top-bar .top-bar-right {
   gap: var(--spacing-medium);
   position: relative;
   z-index: 2;
+  margin-top: 24px;
 }
 
 

@@ -517,6 +517,9 @@ export default async function decorate(block) {
         <a href="/men">Men</a>
         <a href="/women">Women</a>
       </div>
+      <div class="top-bar-center">
+        <img src="/icons/END_20-Black.gif" alt="END. 20 Logo" class="top-bar-gif">
+      </div>
       <div class="top-bar-right">
         <select class="country-selector" aria-label="Select country">
           <option value="gb">GB</option>

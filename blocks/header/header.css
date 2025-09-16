@@ -41,6 +41,21 @@ header .top-bar .top-bar-left {
   gap: var(--spacing-medium);
 }
 
+header .top-bar .top-bar-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .top-bar .top-bar-gif {
+  height: 35px;
+  width: auto;
+  margin-top: 24px;
+}
+
 header .top-bar .top-bar-right {
   display: flex;
   align-items: center;

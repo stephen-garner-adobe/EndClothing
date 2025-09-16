@@ -38,11 +38,114 @@ export default async function decorate(block) {
   block.textContent = '';
   const footer = document.createElement('div');
 
-  // Footer content - Store Switcher
+  // Footer content - Mailing List Section
+  footer.innerHTML = `
+    <div class="footer-mailing-list">
+      <div class="mailing-list-content">
+        <div class="mailing-list-text">
+          <h3>SIGN UP TO THE END. MENSWEAR MAILING LIST</h3>
+          <p>Sign up to hear about exclusive early sale access, and new collections. You can unsubscribe at any time. For details on how to do this and how we use your data, please see our <strong>Privacy Policy</strong>.</p>
+        </div>
+        <div class="mailing-list-form">
+          <input type="email" placeholder="EMAIL ADDRESS" class="email-input">
+          <button class="signup-button">SIGN UP</button>
+        </div>
+      </div>
+      <div class="social-icons">
+        <a href="#" class="social-icon instagram"></a>
+        <a href="#" class="social-icon twitter"></a>
+        <a href="#" class="social-icon facebook"></a>
+      </div>
+    </div>
+    
+    <div class="footer-navigation">
+      <div class="nav-column">
+        <h4>ABOUT</h4>
+        <ul>
+          <li><a href="/our-purpose">Our Purpose</a></li>
+          <li><a href="/careers">Careers</a></li>
+          <li><a href="/affiliates">Affiliates</a></li>
+          <li><a href="/press">Press</a></li>
+          <li><a href="/stores">Stores</a></li>
+        </ul>
+      </div>
+      <div class="nav-column">
+        <h4>CUSTOMER SERVICE</h4>
+        <ul>
+          <li><a href="/help">Help</a></li>
+          <li><a href="/shipping">Shipping</a></li>
+          <li><a href="/returns">Returns</a></li>
+          <li><a href="/payments">Payments</a></li>
+          <li><a href="/your-order">Your Order</a></li>
+        </ul>
+      </div>
+      <div class="nav-column">
+        <h4>CONTACT US</h4>
+        <ul>
+          <li><a href="/email-us">Email us</a></li>
+        </ul>
+      </div>
+      <div class="nav-column">
+        <h4>Apps & Gift Cards</h4>
+        <div class="app-buttons">
+          <button class="app-button end-apps">Our Apps</button>
+          <button class="app-button gift-cards">Gift Cards</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="footer-bottom-content">
+        <div class="footer-left">
+          <div class="footer-logo">END.20</div>
+          <div class="footer-links">
+            <a href="/terms">Terms & Conditions</a>
+            <a href="/cookies">Cookie Settings</a>
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/other-policies">Other Policies</a>
+            <a href="/sitemap">Sitemap</a>
+          </div>
+        </div>
+        <div class="footer-center">
+        </div>
+        <div class="footer-right">
+          <div class="payment-methods">
+            <span class="payment-icon mastercard"></span>
+            <span class="payment-icon amex"></span>
+            <span class="payment-icon discover"></span>
+            <span class="payment-icon jcb"></span>
+            <span class="payment-icon visa"></span>
+            <span class="payment-icon paypal"></span>
+            <span class="payment-icon klarna"></span>
+            <span class="payment-icon clearpay"></span>
+          </div>
+          <div class="copyright">
+            Copyright © Ashworth and Parker Limited (t/a END.) 2025 | All Rights Reserved<br>
+            Company registration number: 06866013 | VAT number: GB 389764913
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+
+  // Mailing list functionality
+  const emailInput = footer.querySelector('.email-input');
+  const signupButton = footer.querySelector('.signup-button');
+  
+  signupButton.addEventListener('click', () => {
+    const email = emailInput.value;
+    if (email && email.includes('@')) {
+      // Handle email signup
+      console.log('Email signup:', email);
+      emailInput.value = '';
+    }
+  });
+
+  // Store Switcher (if multistore)
   if (isMultistore()) {
-    footer.innerHTML = `
-      <div class="storeview-switcher-button"></div>
-    `;
+    const storeSwitcherDiv = document.createElement('div');
+    storeSwitcherDiv.className = 'storeview-switcher-button';
+    footer.appendChild(storeSwitcherDiv);
 
     // Container and component refs
     let modal;

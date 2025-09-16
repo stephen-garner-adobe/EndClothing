@@ -2,12 +2,230 @@ footer {
     background-color: var(--color-neutral-100);
     font: var(--type-body-2-default-font);
     letter-spacing: var(--type-body-2-default-letter-spacing);
+    color: var(--color-neutral-800);
 }
 
-footer .footer > div {
-    margin: auto;
-    max-width: 1200px;
-    padding: 40px 24px 24px;
+/* Mailing List Section */
+footer .footer-mailing-list {
+    background-color: var(--color-neutral-50);
+    padding: var(--spacing-xlarge) var(--spacing-medium);
+    border-bottom: 1px solid var(--color-neutral-300);
+}
+
+footer .mailing-list-content {
+    max-width: 1264px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-large);
+}
+
+footer .mailing-list-text h3 {
+    font: var(--type-headline-2-strong-font);
+    letter-spacing: var(--type-headline-2-strong-letter-spacing);
+    margin: 0 0 var(--spacing-small) 0;
+    text-transform: uppercase;
+    color: var(--color-neutral-900);
+}
+
+footer .mailing-list-text p {
+    margin: 0;
+    font: var(--type-body-2-default-font);
+    letter-spacing: var(--type-body-2-default-letter-spacing);
+    color: var(--color-neutral-700);
+    max-width: 400px;
+}
+
+footer .mailing-list-form {
+    display: flex;
+    gap: var(--spacing-small);
+    align-items: center;
+}
+
+footer .email-input {
+    padding: var(--spacing-small) var(--spacing-medium);
+    border: 1px solid var(--color-neutral-400);
+    border-radius: var(--shape-border-radius-1);
+    font: var(--type-body-2-default-font);
+    letter-spacing: var(--type-body-2-default-letter-spacing);
+    min-width: 200px;
+}
+
+footer .signup-button {
+    background-color: var(--color-neutral-400);
+    color: var(--color-neutral-800);
+    border: none;
+    padding: var(--spacing-small) var(--spacing-medium);
+    border-radius: var(--shape-border-radius-1);
+    font: var(--type-body-2-strong-font);
+    letter-spacing: var(--type-body-2-strong-letter-spacing);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+footer .signup-button:hover {
+    background-color: var(--color-neutral-500);
+}
+
+footer .social-icons {
+    display: none;
+}
+
+footer .social-icon {
+    display: none;
+}
+
+/* Navigation Section */
+footer .footer-navigation {
+    padding: var(--spacing-xlarge) var(--spacing-medium);
+    max-width: 1264px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-xlarge);
+}
+
+footer .nav-column h4 {
+    font: var(--type-body-1-strong-font);
+    letter-spacing: var(--type-body-1-strong-letter-spacing);
+    margin: 0 0 var(--spacing-medium) 0;
+    text-transform: uppercase;
+    color: var(--color-neutral-900);
+}
+
+footer .nav-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer .nav-column li {
+    margin-bottom: var(--spacing-small);
+}
+
+footer .nav-column a {
+    color: var(--color-neutral-700);
+    text-decoration: none;
+    font: var(--type-body-2-default-font);
+    letter-spacing: var(--type-body-2-default-letter-spacing);
+    transition: color 0.3s ease;
+}
+
+footer .nav-column a:hover {
+    color: var(--color-neutral-900);
+}
+
+footer .app-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-small);
+}
+
+footer .app-button {
+    padding: var(--spacing-medium);
+    border-radius: 8px;
+    font: var(--type-body-2-default-font);
+    letter-spacing: var(--type-body-2-default-letter-spacing);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-small);
+    width: 120px;
+    height: 60px;
+    justify-content: flex-start;
+}
+
+footer .app-button.end-apps {
+    background-color: var(--color-neutral-900);
+    color: var(--color-neutral-50);
+    border: none;
+}
+
+footer .app-button.end-apps::before {
+    content: "END.";
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+footer .app-button.gift-cards {
+    background-color: var(--color-neutral-50);
+    color: var(--color-neutral-900);
+    border: 1px solid var(--color-neutral-400);
+}
+
+footer .app-button.gift-cards::before {
+    content: "💳";
+    font-size: 1.2em;
+}
+
+/* Bottom Section */
+footer .footer-bottom {
+    background-color: var(--color-neutral-200);
+    padding: var(--spacing-large) var(--spacing-medium);
+    border-top: 1px solid var(--color-neutral-300);
+}
+
+footer .footer-bottom-content {
+    max-width: 1264px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-large);
+}
+
+footer .footer-logo {
+    font: var(--type-headline-2-strong-font);
+    letter-spacing: var(--type-headline-2-strong-letter-spacing);
+    color: var(--color-neutral-900);
+    margin-bottom: var(--spacing-small);
+}
+
+footer .footer-links {
+    display: flex;
+    gap: var(--spacing-medium);
+    flex-wrap: wrap;
+}
+
+footer .footer-links a {
+    color: var(--color-neutral-700);
+    text-decoration: none;
+    font: var(--type-body-2-default-font);
+    letter-spacing: var(--type-body-2-default-letter-spacing);
+    transition: color 0.3s ease;
+}
+
+footer .footer-links a:hover {
+    color: var(--color-neutral-900);
+}
+
+footer .currency-selector {
+    display: none;
+}
+
+footer .payment-methods {
+    display: flex;
+    gap: var(--spacing-small);
+    margin-bottom: var(--spacing-small);
+}
+
+footer .payment-icon {
+    width: 32px;
+    height: 20px;
+    background-color: var(--color-neutral-400);
+    border-radius: 2px;
+    display: block;
+}
+
+footer .copyright {
+    font: var(--type-body-2-default-font);
+    letter-spacing: var(--type-body-2-default-letter-spacing);
+    color: var(--color-neutral-600);
+    text-align: right;
+    line-height: 1.4;
 }
 
 footer .footer p {
@@ -64,6 +282,49 @@ footer .footer p {
     display: block;
     list-style-type: none;
     margin-bottom: var(--spacing-small);
+}
+
+/* Responsive Design */
+@media (max-width: 899px) {
+    footer .mailing-list-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-medium);
+    }
+    
+    footer .mailing-list-form {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    footer .email-input {
+        min-width: auto;
+    }
+    
+    footer .footer-navigation {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-large);
+    }
+    
+    footer .footer-bottom-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-medium);
+    }
+    
+    footer .footer-links {
+        flex-direction: column;
+        gap: var(--spacing-small);
+    }
+    
+    footer .payment-methods {
+        flex-wrap: wrap;
+    }
+    
+    footer .copyright {
+        text-align: left;
+    }
 }
 
 @media (min-width: 900px) {

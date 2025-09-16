@@ -40,6 +40,8 @@ header .top-bar .top-bar-left {
   align-items: center;
   gap: var(--spacing-medium);
   margin-top: 24px;
+  position: relative;
+  z-index: 2;
 }
 
 header .top-bar .top-bar-center {
@@ -51,6 +53,8 @@ header .top-bar .top-bar-center {
   justify-content: center;
   border-bottom: 1px solid #e5e5e5;
   padding-bottom: 8px;
+  pointer-events: none;
+  z-index: 1;
 }
 
 header .top-bar .top-bar-gif {
@@ -63,6 +67,8 @@ header .top-bar .top-bar-right {
   display: flex;
   align-items: center;
   gap: var(--spacing-medium);
+  position: relative;
+  z-index: 2;
 }
 
 

@@ -131,12 +131,11 @@ export default async function decorate(block) {
   // Mailing list functionality
   const emailInput = footer.querySelector('.email-input');
   const signupButton = footer.querySelector('.signup-button');
-  
+
   signupButton.addEventListener('click', () => {
     const email = emailInput.value;
     if (email && email.includes('@')) {
       // Handle email signup
-      console.log('Email signup:', email);
       emailInput.value = '';
     }
   });

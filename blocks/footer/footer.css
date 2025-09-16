@@ -95,6 +95,15 @@ footer .nav-column h4 {
     color: var(--color-neutral-900);
 }
 
+.storeview-selection > li {
+    margin-bottom: var(--spacing-small);
+}
+
+.storeview-multiple-stores > ul {
+    position: relative;
+    width: 100%;
+}
+
 footer .nav-column ul {
     list-style: none;
     padding: 0;
@@ -111,10 +120,6 @@ footer .nav-column a {
     font: var(--type-body-2-default-font);
     letter-spacing: var(--type-body-2-default-letter-spacing);
     transition: color 0.3s ease;
-}
-
-footer .nav-column a:hover {
-    color: var(--color-neutral-900);
 }
 
 footer .app-buttons {
@@ -202,6 +207,10 @@ footer .footer-links a:hover {
     color: var(--color-neutral-900);
 }
 
+footer .nav-column a:hover {
+    color: var(--color-neutral-900);
+}
+
 footer .currency-selector {
     display: none;
 }
@@ -254,15 +263,6 @@ footer .footer p {
 .storeview-selection .storeview-multiple-stores {
     list-style-image: url("../../icons/chevron-right.svg");
     list-style-position: inside;
-}
-
-.storeview-selection > li {
-    margin-bottom: var(--spacing-small);
-}
-
-.storeview-multiple-stores > ul {
-    position: relative;
-    width: 100%;
 }
 
 .storeview-multiple-stores > ul > li {

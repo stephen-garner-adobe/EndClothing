@@ -305,6 +305,9 @@ header nav .nav-brand a {
   font: var(--type-headline-1-font);
   letter-spacing: var(--type-headline-1-letter-spacing);
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  line-height: 1.2;
 }
 
 li.nav-drop img {
@@ -413,6 +416,9 @@ header nav .nav-sections ul > li > a {
   text-decoration: none;
   padding: 0.8rem 0;
   position: relative;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
 }
 
 header nav .nav-sections .default-content-wrapper > ul > li a {
@@ -545,6 +551,9 @@ header nav .nav-tools-wrapper > button {
   cursor: pointer;
   height: 40px;
   width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 header nav .nav-tools button.nav-cart-button {

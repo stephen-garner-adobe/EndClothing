@@ -465,7 +465,6 @@ export default async function decorate(block) {
     }
   });
 
-  // Close panels when clicking outside
   document.addEventListener('click', (e) => {
     // Check if undo is enabled for mini cart
     const miniCartElement = document.querySelector(

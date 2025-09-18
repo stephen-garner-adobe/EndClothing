@@ -162,6 +162,12 @@ export default async function decorate(block) {
   const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
   const fragment = await loadFragment(navPath);
 
+  // load ticket as fragment
+  const tickerMeta = getMetadata('ticker');
+  const tickerPath = tickerMeta ? new URL(tickerMeta, window.location).pathname : '/ticker';
+  const tickerFragment = await loadFragment(tickerPath);
+  const tickerList = tickerFragment.querySelector('ul');
+
   // decorate nav DOM
   block.textContent = '';
   const nav = document.createElement('nav');
@@ -487,6 +493,15 @@ export default async function decorate(block) {
 
   const navWrapper = document.createElement('div');
   navWrapper.className = 'nav-wrapper';
+
+  const uspTicker = document.createElement('div');
+  uspTicker.classList.add('usp-ticker');
+  const tickerTrack = document.createElement('div');
+  tickerTrack.classList.add('ticker-track');
+  tickerTrack.append(tickerList);
+  uspTicker.append(tickerTrack);
+
+  navWrapper.append(uspTicker);
   navWrapper.append(nav);
   block.append(navWrapper);
 

@@ -1,4 +1,4 @@
-(function () {
+(function initAEMGenAIVariations() {
   let isAEMGenAIVariationsAppLoaded = false;
   function loadAEMGenAIVariationsApp() {
     const script = document.createElement('script');
